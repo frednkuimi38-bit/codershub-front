@@ -1,0 +1,46 @@
+{
+  "files.associations": {
+    "*.css": "tailwindcss"
+  },
+  "editor.quickSuggestions": {
+    "strings": true
+  },
+  "tailwindCSS.includeLanguages": {
+    "javascript": "javascript",
+    "javascriptreact": "javascriptreact",
+    "typescript": "typescript",
+    "typescriptreact": "typescriptreact",
+    "html": "html",
+    "css": "css",
+    "jsx": "javascript",
+    "tsx": "typescriptreact"
+  },
+  "tailwindCSS.experimental.classRegex": [
+    ["clsx\\(([^)]*)\\)", "(?:'|\"|`)([^']*)(?:'|\"|`)"],
+    ["cva\\(([^)]*)\\)", "[\"'`]([^\"'`]*).*?[\"'`]"],
+    ["cn\\(([^)]*)\\)", "(?:'|\"|`)([^']*)(?:'|\"|`)"]
+  ],
+  "tailwindCSS.classAttributes": [
+    "class",
+    "className",
+    "ngClass",
+    "class.*"
+  ],
+  "tailwindCSS.files.exclude": [
+    "**/.git/**",
+    "**/node_modules/**",
+    "**/.next/**",
+    "**/dist/**",
+    "**/build/**"
+  ],
+  "tailwindCSS.validate": true,
+  "tailwindCSS.lint.cssConflict": "warning",
+  "tailwindCSS.lint.invalidScreen": "error",
+  "tailwindCSS.lint.invalidVariant": "error",
+  "tailwindCSS.lint.invalidTailwindDirective": "error",
+  "tailwindCSS.lint.recommendedVariantOrder": "warning",
+  "tailwindCSS.lint.unknownClass": "warning",
+  "css.validate": false,
+  "scss.validate": false,
+  "less.validate": false
+}

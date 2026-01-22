@@ -1,0 +1,152 @@
+@import 'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply border-gray-200;
+  }
+  
+  body {
+    @apply bg-gray-50 text-gray-900 font-sans antialiased;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-primary-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-primary-700 transition-colors duration-200 shadow-lg hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2;
+  }
+  
+  .btn-secondary {
+    @apply bg-gray-100 text-gray-900 px-6 py-3 rounded-lg font-semibold hover:bg-gray-200 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2;
+  }
+  
+  .card {
+    @apply bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow duration-300 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2;
+  }
+  
+  .gradient-text {
+    @apply bg-gradient-to-r from-primary-600 to-primary-800 bg-clip-text text-transparent;
+  }
+  
+  /* Accessibility classes */
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+  }
+  
+  .focus\:not-sr-only {
+    position: static;
+    width: auto;
+    height: auto;
+    padding: inherit;
+    margin: inherit;
+    overflow: visible;
+    clip: auto;
+    white-space: inherit;
+  }
+  
+  /* Smooth scrolling for skip links */
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  /* High contrast mode support */
+  @media (prefers-contrast: high) {
+    .btn-primary {
+      @apply border-2 border-black;
+    }
+    
+    .card {
+      @apply border-2 border-gray-800;
+    }
+  }
+  
+  /* Reduced motion support */
+  @media (prefers-reduced-motion: reduce) {
+    * {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+  
+  /* Mobile optimizations */
+  @media (max-width: 640px) {
+    .btn-primary,
+    .btn-secondary {
+      @apply px-4 py-2 text-sm;
+    }
+    
+    .card {
+      @apply p-4;
+    }
+    
+    /* Better touch targets on mobile */
+    button, a, input, select, textarea {
+      @apply min-h-[44px];
+    }
+    
+    /* Prevent horizontal scroll on mobile */
+    body {
+      @apply overflow-x-hidden;
+    }
+    
+    /* Optimize images for mobile */
+    img {
+      @apply max-w-full h-auto;
+    }
+  }
+  
+  /* Tablet optimizations */
+  @media (min-width: 641px) and (max-width: 1024px) {
+    .btn-primary,
+    .btn-secondary {
+      @apply px-5 py-2.5;
+    }
+    
+    .card {
+      @apply p-5;
+    }
+  }
+  
+  /* Large desktop optimizations */
+  @media (min-width: 1536px) {
+    .max-w-7xl {
+      @apply max-w-screen-2xl;
+    }
+  }
+  
+  /* Print styles */
+  @media print {
+    .no-print {
+      display: none !important;
+    }
+    
+    body {
+      @apply text-black bg-white;
+    }
+    
+    .card {
+      @apply border border-gray-300 shadow-none;
+    }
+  }
+  
+  /* Dark mode support preparation */
+  @media (prefers-color-scheme: dark) {
+    /* Dark mode styles can be added here when needed */
+  }
+}

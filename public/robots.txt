@@ -1,0 +1,11 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://codershub.com/sitemap.xml
+
+# Block unnecessary files
+Disallow: /admin/
+Disallow: /private/
+Disallow: /*.json$
+Disallow: /*?*
